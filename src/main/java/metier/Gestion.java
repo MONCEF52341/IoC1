@@ -1,8 +1,14 @@
 package metier;
 
 import dao.ICalcul;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Gestion implements IGestion{
+     @Autowired
+        @Qualifier("calculV1")
     private ICalcul calc;
     @Override
     public double calcul() {

@@ -20,7 +20,7 @@ public class InstanciationDynamique {
         String gestionClass = sc.nextLine();
         Class cGestion = Class.forName(gestionClass);
         IGestion gestion = (IGestion) cGestion.getConstructor().newInstance();
-        Method m = cGestion.getMethod("SetCalc",ICalcul.class);
+        Method m = cGestion.getMethod("setCalc",ICalcul.class);
         m.invoke(gestion,calcul);
         System.out.println(gestion.calcul());
 
