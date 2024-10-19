@@ -12,6 +12,7 @@ public class Gestion implements IGestion{
     private ICalcul calc;
     @Override
     public double calcul() {
+        System.out.println("Multiplie La valeur ci-dessous par 10");
         return calc.getValue()*10;
     }
     //Ajouter méthode pour pouvoir injecter des objets de type Icalcul

@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class InstanciationDynamique {
     public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-            Scanner sc = new Scanner(new File("src/main/config.txt"));
+            Scanner sc = new Scanner(new File("config.txt"));
             String calcClass = sc.nextLine();
             Class cCalcul = Class.forName(calcClass);
             ICalcul calcul = (ICalcul) cCalcul.getConstructor().newInstance();

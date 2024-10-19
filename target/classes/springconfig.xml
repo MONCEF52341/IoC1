@@ -3,8 +3,8 @@
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-    <bean id="c1" class="dao.CalculV1"></bean>
+    <bean id="c1" class="dao.CalculV1"/>
     <bean id="gestion" class="metier.Gestion">
-        <property name="calc" ref="c1"></property>
+        <property name="calc" ref="c1"/>
     </bean>
 </beans>
